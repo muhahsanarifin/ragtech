@@ -21,7 +21,7 @@ export const Login = () => {
       <div className="mx-auto max-w-lg">
         <img src={Img.GLOGO} alt="G" className="w-[128px] h-[128px] mx-auto" />
 
-        <h1 className="text-center text-2xl font-bold text-[#cc2e37] sm:text-3xl">
+        <h1 className="text-center text-2xl font-bold text-[#cc2e37] sm:text-xl">
           RAGTECH | <span className="text-[#cc2e36aa]">DASHBOARD</span>.
         </h1>
 
@@ -74,7 +74,7 @@ export const Guest = () => {
     <>
       <div className="w-full px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg">
-          <h1 className="text-center text-2xl font-bold text-[#cc2e37] sm:text-3xl">
+          <h1 className="text-center text-2xl font-bold text-[#cc2e37] sm:text-xl">
             RAGTECH.
           </h1>
 

@@ -50,7 +50,7 @@ export const User = () => {
   );
 
   return (
-    <div className="p-4 flex flex-col h-full md:min-h-screen">
+    <div className="p-4 flex flex-col h-full sm:min-h-[23.45rem]">
       {/* BREADCRUMB */}
       <section className="my-3">
         <Breadcrumb
@@ -169,7 +169,7 @@ export const User = () => {
       <section
         className={
           params.coretitle === "add" || params.detailId || params.editId
-            ? "flex h-full p-4 border rounded-b-lg md:h-screen"
+            ? "flex h-full p-4 border rounded-b-lg sm:min-h-[23.45rem]"
             : null
         }
       >
@@ -227,6 +227,7 @@ export const Account = ({ onSearch }) => {
       email: data.email,
       name: data.name,
       role: data.role,
+      password: data.password,
       status: status,
     };
 
@@ -258,7 +259,6 @@ export const Account = ({ onSearch }) => {
   // Handle paginate
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(7);
-  // const []
 
   const posts = currentPosts(get?.data, currentPage, postsPerPage);
 
@@ -295,10 +295,12 @@ export const Account = ({ onSearch }) => {
   return (
     <>
       <section
-        className={`${currentPost.length === 0 && "flex"} border h-full`}
+        className={`${
+          currentPost.length === 0 && "flex"
+        } border h-full sm:min-h-[23.45rem]`}
       >
         {currentPost.length === 0 ? (
-          <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl m-auto">
+          <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-xl m-auto">
             We can&apos;t find data.
           </h1>
         ) : (
@@ -925,9 +927,7 @@ export const EditAccount = () => {
           }`}
           onInitial="Edit"
           setClick={handleSaveEditAccount}
-          disabled={
-            Object.values(body).some((el) => el === "")
-          }
+          disabled={Object.values(body).some((el) => el === "")}
         />
         <ACButton
           onClassName={`inline-block rounded-sm border border-[#6a6f85] bg-transparent px-12 py-3 text-sm font-medium text-[#6a6f85] ${

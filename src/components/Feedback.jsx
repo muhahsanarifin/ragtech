@@ -21,7 +21,7 @@ export const Developing = () => {
 export const Success = ({ msg }) => {
   return (
     <div className="m-auto flex h-full w-full">
-      <h3 className="m-auto font-semibold text-2xl text-[#68B984]">{msg}</h3>
+      <h3 className="m-auto font-semibold text-2xl md:text-xl text-[#68B984]">{msg}</h3>
     </div>
   );
 };
@@ -32,7 +32,7 @@ Success.propTypes = {
 
 export const Empty = () => {
   return (
-    <div className="grid h-full px-4 bg-white place-content-center border-x-2 border-b-2 border-t rounded-b-lg">
+    <div className="grid h-full sm:min-h-[23.45rem] px-4 bg-white place-content-center border-x-2 border-b-2 border-t rounded-b-lg">
       <h1 className="tracking-widest text-gray-500 uppercase">
         DATA IS NOT AVAILABLE.
       </h1>
